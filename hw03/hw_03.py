@@ -1,11 +1,12 @@
 import sys
 from pathlib import Path
-from colorama import init, Fore
+
+from colorama import Fore, init
 
 init(autoreset=True)
 
 if len(sys.argv) < 2:
-    print("python hw_03.py . <доступ_до_директорії>")
+    print("python hw_03.py <доступ_до_директорії>")
     sys.exit(1)
 second_el = sys.argv[1]
 second_el_pathobj = Path(second_el)
