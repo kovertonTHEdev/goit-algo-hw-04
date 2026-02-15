@@ -1,4 +1,4 @@
-def total_salary (salaries_file): 
+def total_salary(salaries_file): 
      try:
           with open(salaries_file, "r", encoding="UTF-8") as file:
                total = 0
@@ -11,7 +11,7 @@ def total_salary (salaries_file):
                          try: 
                               salary = int(salary_text)
                               total += salary 
-                              count+=1 
+                              count +=1 
                          except ValueError:
                               continue
      except FileNotFoundError:
