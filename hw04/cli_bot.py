@@ -3,6 +3,7 @@ def parse_input(user_input):
     cmd = cmd.strip().lower()
     return cmd, *args
 
+
 def add_contact(args, users_dict):
     if len(args) == 2:
         name, phone = args[0], args[1]
@@ -10,6 +11,7 @@ def add_contact(args, users_dict):
         return "Contact added."
     else:
         return "Give me name and phone"
+
 
 def change_contact(args, users_dict):
     if len(args) == 2:
@@ -21,8 +23,10 @@ def change_contact(args, users_dict):
             return "Contact not found"
     else:
         return "Give me name and phone"
+
+
 def show_phone(args, users_dict):
-    if len(args) !=1:
+    if len(args) != 1:
         return "Give me name"
     else:
         name = args[0]
@@ -30,6 +34,8 @@ def show_phone(args, users_dict):
             return users_dict[name]
         else:
             return "Contact not found"
+
+
 def show_all(users_dict):
     if not users_dict:
         return "No contacts"
@@ -39,14 +45,14 @@ def show_all(users_dict):
             joint_str = f"{name}: {phone}"
             all_users_visibility.append(joint_str)
     return "\n".join(all_users_visibility)
-                  
+
 
 def main():
     print("Welcome to the assistant bot!")
     users_dict = {}
     while True:
         user_input = input("Enter a command: ")
-        if not user_input.split(): 
+        if not user_input.split():
             continue
         command, *args = parse_input(user_input)
 
@@ -70,6 +76,7 @@ def main():
             print("How can I help you?")
         else:
             print("Invalid command.")
+
 
 if __name__ == "__main__":
     main()

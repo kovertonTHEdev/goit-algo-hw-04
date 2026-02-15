@@ -19,5 +19,5 @@ def get_cats_info(cats_file):
                 except ValueError:
                     continue
     except FileNotFoundError:
-        return[]
+        return []
     return cats_list

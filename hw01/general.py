@@ -1,5 +1,6 @@
 from calculation_func import total_salary
 from pathlib import Path
+
 BASE = Path(__file__).resolve().parent
 salaries_file = BASE / "salaries.txt"
 
