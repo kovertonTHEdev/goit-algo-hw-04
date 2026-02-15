@@ -1,6 +1,6 @@
 def get_cats_info(cats_file):
     try:
-        with open (cats_file, "r", encoding="UTF-8") as file:
+        with open(cats_file, "r", encoding="UTF-8") as file:
             cats_list = []
             for line in file:
                 cleaned_line = line.strip()
@@ -19,5 +19,5 @@ def get_cats_info(cats_file):
                 except ValueError:
                     continue
     except FileNotFoundError:
-        return []
+        return[]
     return cats_list

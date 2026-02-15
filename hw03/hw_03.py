@@ -4,7 +4,7 @@ from colorama import init, Fore
 init(autoreset=True)
 
 if len(sys.argv) < 2:
-    print ("python hw03\hw_03.py . <доступ_до_директорії>")
+    print("python hw03/hw_03.py . <доступ_до_директорії>")
     sys.exit(1)
 second_el = sys.argv[1]
 second_el_pathobj = Path(second_el)
