@@ -5,7 +5,7 @@ def parse_input(user_input):
 
 def add_contact(args, users_dict):
     if len(args) == 2:
-        name, phone = args[0], args [1]
+        name, phone = args[0], args[1]
         users_dict[name] = phone
         return "Contact added."
     else:
