@@ -13,7 +13,7 @@ def get_cats_info(cats_file):
                 name = parts[1]
                 age_text = parts[2]
                 try:
-                    age = int(age_text)
+                    age = age_text
                     cats_dict = {"id": cat_id, "name": name, "age": age}
                     cats_list.append(cats_dict)
                 except ValueError:

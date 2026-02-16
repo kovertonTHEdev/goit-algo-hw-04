@@ -9,7 +9,7 @@ def total_salary(salaries_file):
                 if len(parts) == 2:
                     salary_text = parts[1]
                     try:
-                        salary = int(salary_text)
+                        salary = float(salary_text)
                         total += salary
                         count += 1
                     except ValueError:
